@@ -45,18 +45,19 @@ Ce projet est réalisé dans le cadre de la formation **Graduate Développeur We
 - ✅ Modélisation de la base de données
 - ✅ Initialisation du projet Symfony
 - ✅ Mise en place de l'environnement Docker
+- ✅ Initialisation du dépôt Git
 
 ## En cours
 
-- 🚧 Initialisation du dépôt Git
+- 🚧 Création du Layout du site
 
 ## À venir
 
-- ⏳ Intégration d'une base de données NoSQL (MongoDB)
 - ⏳ Authentification
 - ⏳ Gestion des menus
 - ⏳ Gestion des commandes
 - ⏳ Espaces Utilisateur / Employé / Administrateur
+- ⏳ Intégration d'une base de données NoSQL (MongoDB)
 - ⏳ Déploiement
 
 ---
