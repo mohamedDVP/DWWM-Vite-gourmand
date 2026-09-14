@@ -1,0 +1,82 @@
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border-color: var(--color-primary);
+    border-radius: 8px;
+    padding: 12px 24px;
+    box-shadow: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border-color: var(--color-primary);
+}
+
+.btn-primary:focus {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+}
+
+.btn-primary:focus-visible {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border-color: var(--color-primary);
+    box-shadow: none;
+}
+
+.btn-primary:active {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+}
+
+.btn-primary.bold {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-primary.bold:active {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border-color: var(--color-primary);
+}
+
+.btn-primary.bold:focus {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+}
+
+.btn-primary.bold:focus-visible {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border-color: var(--color-primary);
+}
+
+.btn-primary.semibold {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.btn-primary.semibold:active {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border-color: var(--color-primary);
+}
+
+.btn-primary.semibold:focus {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+}
+
+.btn-primary.semibold:focus-visible {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border-color: var(--color-primary);
+}
+
+@media (max-width: 991.98px) {
+    .btn-primary {
+        display: block;
+        width: 20%;
+    }
+}
