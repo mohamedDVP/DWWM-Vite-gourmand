@@ -32,3 +32,94 @@
     font-size: 20px;
     font-weight: 600;
 }
+
+.presentation {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 31px 0 24px;
+    box-sizing: border-box;
+    background-color: var(--color-background);
+    text-align: center;
+}
+
+.presentation h2 {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.grille-presentation {
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.grille-presentation .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.presentation-card {
+    width: 287px;
+    height: auto;
+    padding: 24px 32px 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border-radius: 8px;
+    background-color: var(--color-surface);
+    gap: 16px;
+}
+
+.presentation-card svg {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+}
+
+.presentation-card h3 {
+    width: 223px;
+    height: auto;
+    color: var(--color-text-primary);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.presentation-card p {
+    color: var(--color-text-primary);
+    font-size: 18px;
+    font-weight: 400;
+    width: 223px;
+    height: auto;
+    margin: 0;
+    line-height: normal;
+}
+
+@media (min-width: 992px) {
+    .grille-presentation {
+        margin: 50px 10px;
+    }
+
+    .presentation-card {
+        width: 440px;
+        height: 212px;
+    }
+
+    .presentation-card svg {
+        width: 52px;
+        height: 52px;
+    }
+}
