@@ -265,6 +265,35 @@
     text-align: left;
     align-self: center;
 }
+
+.contact {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px 0;
+    background-color: var(--color-background-alt);
+    padding: 20px 0;
+}
+
+.contact .title {
+    width: auto;
+    color: var(--color-text-primary);
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.contact > p {
+    width: 229px;
+    color: var(--color-text-primary);
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+}
 /* =========================
    MENUS — DESKTOP
    ========================= */
@@ -399,4 +428,14 @@
     .avis-card__text {
         text-align: center;
     }
+
+    .contact {
+        width: 100%;
+        height: auto;
+        gap: 10px;
+        margin: 40px 0;
+        background-color: var(--color-background-alt);
+    }
+    
+    
 }
