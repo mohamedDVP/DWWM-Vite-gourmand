@@ -6,7 +6,7 @@
 <section class="hero">
     <h1 class="titre-h1">Vite & Gourmand</h1>
     <p class="slogan">Des repas frais, livrés rapidement.</p>
-    <a href="#" class="btn btn-primary semibold">Voir les menus</a>
+    <a href="{{ path('app_menus') }}" class="btn btn-primary semibold">Voir les menus</a>
 </section>
 
 <section class="presentation">
@@ -123,15 +123,15 @@
                     </div>
                     <h4>14,90€</h4>
                 </div>
-                <a href="#" class="btn btn-secondary">
+                <a href="" class="btn btn-secondary">
                     Voir le détail
                 </a>
             </div>
         </article>
     </div>
-    <div class="btn btn-primary bold">
+    <a href="{{ path('app_menus') }}" class="btn btn-primary bold">
         Voir tous les menus
-    </div>
+    </a>
 </section>
 <section class="avis">
     <h2 class="title">Ils nous font confiance</h2>
@@ -162,7 +162,7 @@
         Besoin d'un devis ou d'un renseignement ?
     </p>
 
-    <a href="#" class="btn btn-primary bold">Nous contacter</a>
+    <a href="{{ path('app_contact') }}" class="btn btn-primary bold">Nous contacter</a>
 </section>
 
 {% endblock %}
