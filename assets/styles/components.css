@@ -8,11 +8,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 8px;
     text-align: center;
-    height: 500px;
-    width: auto;
+    width: 100%;
+    min-height: 190px;
     background-image: url(../img/ImageHero.png);
-    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--color-surface);
 }
 
@@ -28,15 +31,45 @@
     z-index: 1;
 }
 
-.titre-h1 {
+.hero h1,
+.hero .slogan {
+    margin: 0;
+}
+
+h1 {
     font-size: 64px;
     font-weight: 700;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    line-height: 100%;
+}
+
+h4 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-text-primary);
 }
 
 .slogan {
     font-size: 20px;
     font-weight: 600;
 }
+
+/* =========================
+   PRÉSENTATION
+   ========================= */
 
 .presentation {
     width: 100%;
@@ -46,20 +79,10 @@
     align-items: center;
     justify-content: flex-start;
     gap: 20px;
-    padding: 31px 0 24px;
+    padding-top: 20px;
     box-sizing: border-box;
     background-color: var(--color-background);
     text-align: center;
-}
-
-.presentation h2 {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    color: var(--color-text-primary);
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 100%;
 }
 
 .grille-presentation {
@@ -95,15 +118,6 @@
     flex-shrink: 0;
 }
 
-.presentation-card h3 {
-    width: 223px;
-    height: auto;
-    color: var(--color-text-primary);
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 100%;
-}
-
 .presentation-card p {
     color: var(--color-text-primary);
     font-size: 18px;
@@ -114,6 +128,10 @@
     line-height: normal;
 }
 
+/* =========================
+   MENUS
+   ========================= */
+
 .menus {
     width: 100%;
     height: auto;
@@ -122,9 +140,19 @@
     align-items: center;
     justify-content: center;
     gap: 24px;
-    margin: 20px 0;
+    padding-top: 20px;
     background-color: var(--color-background-alt);
     text-align: center;
+}
+
+.menus-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .menu-card {
@@ -152,12 +180,6 @@
     gap: 16px;
     padding: 24px 12px;
     box-sizing: border-box;
-}
-
-.menu-card h3 {
-    color: var(--color-text-primary);
-    font-size: 24px;
-    font-weight: 600;
 }
 
 .menu-card p {
@@ -191,21 +213,22 @@
 }
 
 .menu-card__info h4 {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--color-text-primary);
+    width: auto;
 }
+
+/* =========================
+   AVIS
+   ========================= */
 
 .avis {
     width: 100%;
     height: auto;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 24px;
-    margin: 20px 0;
+    padding-top: 20px;
     background-color: var(--color-background);
     text-align: center;
 }
@@ -256,6 +279,10 @@
     align-self: center;
 }
 
+/* =========================
+   CONTACT
+   ========================= */
+
 .contact {
     width: 100%;
     height: auto;
@@ -264,9 +291,8 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin: 40px 0;
     background-color: var(--color-background-alt);
-    padding: 20px 0;
+    padding-top: 20px;
 }
 
 .contact .title {
@@ -278,12 +304,16 @@
 }
 
 .contact > p {
-    width: 229px;
+    width: 100%;
     color: var(--color-text-primary);
     font-size: 18px;
     font-weight: 400;
-    text-align: left;
+    text-align: center;
 }
+
+/* =========================
+   FOOTER
+   ========================= */
 
 .footer {
     width: 100%;
@@ -291,7 +321,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 24px;
+    padding-top: 20px;
     gap: 24px;
     background-color: var(--color-dark);
     box-sizing: border-box;
@@ -447,6 +477,10 @@
     text-decoration: none;
 }
 
+/* =========================
+   PAGE INTRO
+   ========================= */
+
 .page-intro {
     width: 100%;
     display: flex;
@@ -457,7 +491,7 @@
     text-align: center;
 }
 
-.menus-intro p {
+.page-intro p {
     width: 100%;
     height: auto;
     margin: 0;
@@ -466,6 +500,10 @@
     font-weight: 400;
     text-align: center;
 }
+
+/* =========================
+   FILTRES DES MENUS
+   ========================= */
 
 .menus-filters {
     display: flex;
@@ -512,6 +550,10 @@
     box-sizing: border-box;
 }
 
+/* =========================
+   FORMULAIRE DE CONTACT
+   ========================= */
+
 .contact-form {
     display: flex;
     justify-content: center;
@@ -534,7 +576,8 @@
     gap: 10px;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 12px 16px;
     border: 1px solid var(--color-border);
@@ -549,21 +592,28 @@
     min-height: 160px;
     resize: vertical;
 }
+
 /* =========================
    MENUS — DESKTOP
    ========================= */
 
 @media (min-width: 992px) {
+
+    .hero {
+        width: 100%;
+        height: 500px;
+        min-height: 0;
+        background-size: cover;
+    }
+
+    /* =========================
+       PRÉSENTATION
+       ========================= */
+
     .presentation {
         height: auto;
         margin: 20px 0;
         gap: 10px;
-    }
-
-    .presentation h2 {
-        width: auto;
-        height: 40px;
-        margin: 0;
     }
 
     .grille-presentation {
@@ -590,26 +640,24 @@
         height: 52px;
     }
 
-    .presentation-card h3 {
-        width: auto;
-    }
-
     .presentation-card p {
         width: auto;
     }
+
+    /* =========================
+       MENUS
+       ========================= */
 
     .menus {
         width: 100%;
         height: auto;
         gap: 24px;
-        margin: 20px 0;
+        /* margin: 0 0 32px; */
         padding: 20px 0;
     }
 
     .menus-grid {
-        width: 100%;
         flex-direction: row;
-        align-items: center;
         justify-content: center;
         gap: 32px;
         margin: 10px;
@@ -634,7 +682,7 @@
     }
 
     .menu-card p {
-        width: auto; 
+        width: auto;
     }
 
     .menu-card__info {
@@ -651,10 +699,14 @@
         width: 69px;
     }
 
+    /* =========================
+       AVIS
+       ========================= */
+
     .avis {
         width: 100%;
         height: auto;
-        display:flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -684,14 +736,22 @@
         text-align: center;
     }
 
+    /* =========================
+       CONTACT
+       ========================= */
+
     .contact {
         width: 100%;
         height: auto;
         gap: 10px;
-        margin: 40px 0;
         background-color: var(--color-background-alt);
+        padding: 20px 0;
     }
-    
+
+    /* =========================
+       FOOTER
+       ========================= */
+
     .footer {
         width: 100%;
         height: 319px;
@@ -872,6 +932,10 @@
         text-decoration: none;
     }
 
+    /* =========================
+       PAGE INTRO
+       ========================= */
+
     .page-intro {
         width: 100%;
         height: auto;
@@ -880,6 +944,10 @@
     .page-intro p {
         font-size: 32px;
     }
+
+    /* =========================
+       FILTRES DES MENUS
+       ========================= */
 
     .menus-filters {
         width: 100%;
@@ -906,6 +974,10 @@
         justify-content: center;
         gap: 30px;
     }
+
+    /* =========================
+       FORMULAIRE DE CONTACT
+       ========================= */
 
     .contact-form form {
         max-width: 600px;
