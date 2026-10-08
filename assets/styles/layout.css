@@ -1,4 +1,4 @@
-.site-header{
+.site-header {
     background-color: var(--color-surface);
     box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.05);
 }
@@ -9,7 +9,7 @@
 
 .nav-link {
     color: var(--color-primary);
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 600;
     box-shadow: none;
     text-align: center;
@@ -33,6 +33,6 @@
     }
 
     .nav-link {
-        font-size: 24px;
+        font-size: 32px;
     }
 }
