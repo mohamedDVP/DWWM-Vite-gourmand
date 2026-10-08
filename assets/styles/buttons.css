@@ -1,77 +1,36 @@
+/* =========================
+   BOUTONS
+   ========================= */
+
 .btn-primary {
-    background-color: var(--color-primary);
-    color: var(--color-surface);
-    border-color: var(--color-primary);
-    border-radius: 8px;
+    display: block;
+    width: 100%;
     padding: 12px 24px;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-surface);
     box-shadow: none;
 }
 
-.btn-primary:hover {
-    background-color: var(--color-primary);
-    color: var(--color-surface);
-    border-color: var(--color-primary);
-}
-
-.btn-primary:focus {
-    background-color: var(--color-primary);
-    color: var(--color-surface);
-}
-
-.btn-primary:focus-visible {
-    background-color: var(--color-primary);
-    color: var(--color-surface);
-    border-color: var(--color-primary);
-    box-shadow: none;
-}
-
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:focus-visible,
 .btn-primary:active {
     background-color: var(--color-primary);
+    border-color: var(--color-primary);
     color: var(--color-surface);
+    box-shadow: none;
 }
 
 .btn-primary.bold {
     font-size: 16px;
-    font-weight: bold;
-}
-
-.btn-primary.bold:active {
-    background-color: var(--color-primary);
-    color: var(--color-surface);
-    border-color: var(--color-primary);
-}
-
-.btn-primary.bold:focus {
-    background-color: var(--color-primary);
-    color: var(--color-surface);
-}
-
-.btn-primary.bold:focus-visible {
-    background-color: var(--color-primary);
-    color: var(--color-surface);
-    border-color: var(--color-primary);
+    font-weight: 700;
 }
 
 .btn-primary.semibold {
-    font-weight: 600;
     font-size: 20px;
-}
-
-.btn-primary.semibold:active {
-    background-color: var(--color-primary);
-    color: var(--color-surface);
-    border-color: var(--color-primary);
-}
-
-.btn-primary.semibold:focus {
-    background-color: var(--color-primary);
-    color: var(--color-surface);
-}
-
-.btn-primary.semibold:focus-visible {
-    background-color: var(--color-primary);
-    color: var(--color-surface);
-    border-color: var(--color-primary);
+    font-weight: 600;
 }
 
 .btn-secondary {
@@ -84,32 +43,27 @@
     font-weight: 400;
 }
 
-.btn-secondary:hover {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-    border-color: var(--color-secondary);
-}
-
-.btn-secondary:focus {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-}
-
-.btn-secondary:focus-visible {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-    border-color: var(--color-secondary);
-    box-shadow: none;
-}
-
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:focus-visible,
 .btn-secondary:active {
     background-color: var(--color-secondary);
     color: var(--color-primary);
 }
 
-@media (max-width: 991.98px) {
+.btn-secondary:focus-visible {
+    border-color: var(--color-secondary);
+    box-shadow: none;
+}
+
+
+/* =========================
+   BOUTONS — DESKTOP
+   ========================= */
+
+@media (min-width: 992px) {
+
     .btn-primary {
-        display: block;
-        width: 100%;
+        width: auto;
     }
 }
