@@ -34,9 +34,6 @@ function initAuthentication() {
         registerPasswordInput.addEventListener('input', validatePassword);
         passwordConfirmInput.addEventListener('input', validatePassword);
     }
-        
-        // registerPasswordInput.value = '';
-        // passwordConfirmInput.value = '';
 }
 
 
