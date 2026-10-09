@@ -3,6 +3,8 @@ function initAuthentication() {
     const registerSection = document.getElementById('inscription');
     const loginTab = document.getElementById('tab-login');
     const loginSection = document.getElementById('connexion');
+    const registerPasswordInput = document.getElementById('register-password');
+    const passwordConfirmInput = document.getElementById('password-confirm');
 
     if(registerTab && registerSection && loginTab && loginSection) {
         registerTab.addEventListener('click', function () {
@@ -19,6 +21,23 @@ function initAuthentication() {
             registerTab.classList.remove('active');
         });
     }
+
+    if(registerPasswordInput && passwordConfirmInput) {
+        function validatePassword() {
+            if (registerPasswordInput.value !== passwordConfirmInput.value && passwordConfirmInput.value !== '') {
+                passwordConfirmInput.setCustomValidity("Les mots de passe ne correspondent pas.");
+            } else {
+                passwordConfirmInput.setCustomValidity("");
+            }
+        }
+
+        registerPasswordInput.addEventListener('input', validatePassword);
+        passwordConfirmInput.addEventListener('input', validatePassword);
+    }
+        
+        // registerPasswordInput.value = '';
+        // passwordConfirmInput.value = '';
 }
+
 
 document.addEventListener('turbo:load', initAuthentication);
