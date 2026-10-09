@@ -11,4 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/app.css';
 import 'bootstrap';
 
+// Scripts des fonctionnalités
+import './js/authentication.js';
+
 console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');

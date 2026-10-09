@@ -47,8 +47,8 @@
 .btn-secondary:focus,
 .btn-secondary:focus-visible,
 .btn-secondary:active {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-surface);
 }
 
 .btn-secondary:focus-visible {
