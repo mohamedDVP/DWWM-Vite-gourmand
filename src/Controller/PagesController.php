@@ -15,4 +15,12 @@ final class PagesController extends AbstractController
             'controller_name' => 'PagesController',
         ]);
     }
+
+    #[Route('/cgv', name: 'app_cgv')]
+    public function cgv(): Response
+    {
+        return $this->render('pages/cgv.html.twig', [
+            'controller_name' => 'PagesController',
+        ]);
+    }
 }
