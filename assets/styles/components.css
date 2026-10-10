@@ -621,6 +621,71 @@ h4 {
 }
 
 /* =========================
+   DÉTAIL DU MENU
+   ========================= */
+
+.menu-detail {
+    width: calc(100% - 32px);
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 20px auto;
+    padding: 24px 16px;
+    box-sizing: border-box;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+}
+
+.menu-detail h1 {
+    margin: 0;
+    font-size: 32px;
+    text-align: center;
+}
+
+.menu-detail h2 {
+    margin: 0 0 16px;
+    font-size: 24px;
+}
+
+.menu-detail h3 {
+    margin: 16px 0 8px;
+    font-size: 20px;
+}
+
+.menu-detail p {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.menu-detail__information,
+.menu-detail__composition {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu-detail__information {
+    padding: 16px;
+    background-color: var(--color-background-alt);
+    border-radius: 8px;
+}
+
+.menu-detail__composition h3:first-of-type {
+    margin-top: 0;
+}
+
+.menu-detail__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+/* =========================
    DESKTOP
    ========================= */
 
@@ -1014,7 +1079,38 @@ h4 {
     }
 
     /* =========================
-       MENTIONS LEGALES 
-       ========================= */
+   DÉTAIL DU MENU
+   ========================= */
+
+    .menu-detail {
+        padding: 40px;
+        gap: 32px;
+    }
+
+    .menu-detail h1 {
+        font-size: 48px;
+    }
+
+    .menu-detail h2 {
+        font-size: 32px;
+    }
+
+    .menu-detail__information {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        padding: 24px;
+    }
+
+    .menu-detail__composition {
+        padding: 24px;
+    }
+
+    .menu-detail__actions {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 16px;
+    }
     
 }

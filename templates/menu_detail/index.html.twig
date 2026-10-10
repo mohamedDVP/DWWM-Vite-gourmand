@@ -1,0 +1,55 @@
+{% extends 'layouts/public.html.twig' %}
+
+{% block title %}Détail du menu{% endblock %}
+
+{% block content %}
+    <section class="menu-detail">
+        <h1>{{ menu.name }}</h1>
+
+        <p>{{ menu.description }}</p>
+
+        <div class="menu-detail__information">
+            <p>
+                <strong>Prix par personne :</strong>
+                {{ menu.price|number_format(2, ',', ' ') }} €
+            </p>
+
+            <p>
+                <strong>Nombre minimum de personnes :</strong>
+                {{ menu.minPersons }}
+            </p>
+
+            <p>
+                <strong>Frais de livraison :</strong>
+                {{ menu.deliveryFee|number_format(2, ',', ' ') }} €
+            </p>
+
+            <p>
+                <strong>Réduction possible :</strong>
+                {{ menu.discount }} %
+            </p>
+        </div>
+
+        <div class="menu-detail__composition">
+            <h2>Composition du menu</h2>
+
+            <h3>Entrée</h3>
+            <p>{{ menu.starter }}</p>
+
+            <h3>Plat</h3>
+            <p>{{ menu.mainCourse }}</p>
+
+            <h3>Désert</h3>
+            <p>{{ menu.dessert }}</p>
+        </div>
+        <div class="menu-detail__actions">
+            <a href="{{ path('app_menus') }}" class="btn btn-secondary">
+                Retour aux menus
+            </a>
+
+            <a href="{{ path('app_login') }}" class="btn btn-primary bold">
+                Se connecter pour commander
+            </a>
+        </div>
+    </section>
+{% endblock %}
