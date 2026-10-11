@@ -5,6 +5,11 @@ services:
     build:
       context: .
       dockerfile: docker/php/Dockerfile
+    env_file:
+      - path: .env.docker
+        required: false
+      - path: .env.docker.local
+        required: true
     volumes:
       - .:/var/www/html
     depends_on:
@@ -19,9 +24,11 @@ services:
     image: mysql:8.4
     env_file:
       - path: .env.docker
-        required: true
-      - path: .env.docker.local
         required: false
+      - path: .env.docker.local
+        required: true
+    ports:
+      - "53228:3306"
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p$$MYSQL_ROOT_PASSWORD"]
       timeout: 5s
