@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\CommandeRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -39,7 +41,7 @@ class Commande
     private ?string $statut = null;
 
     #[ORM\Column]
-    private ?bool $pretMat√eriel = null;
+    private ?bool $pretMateriel = null;
 
     #[ORM\ManyToOne(inversedBy: 'commandes')]
     #[ORM\JoinColumn(nullable: false)]
@@ -47,6 +49,17 @@ class Commande
 
     #[ORM\Column]
     private ?bool $restitutionMateriel = null;
+
+    /**
+     * @var Collection<int, Menu>
+     */
+    #[ORM\ManyToMany(targetEntity: Menu::class, inversedBy: 'commandes')]
+    private Collection $menus;
+
+    public function __construct()
+    {
+        $this->menus = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -149,14 +162,14 @@ class Commande
         return $this;
     }
 
-    public function isPretMat√eriel(): ?bool
+    public function isPretMateriel(): ?bool
     {
-        return $this->pretMat√eriel;
+        return $this->pretMateriel;
     }
 
-    public function setPretMat√eriel(bool $pretMat√eriel): static
+    public function setPretMateriel(bool $pretMateriel): static
     {
-        $this->pretMat√eriel = $pretMat√eriel;
+        $this->pretMateriel = $pretMateriel;
 
         return $this;
     }
@@ -181,6 +194,30 @@ class Commande
     public function setRestitutionMateriel(bool $restitutionMateriel): static
     {
         $this->restitutionMateriel = $restitutionMateriel;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Menu>
+     */
+    public function getMenus(): Collection
+    {
+        return $this->menus;
+    }
+
+    public function addMenu(Menu $menu): static
+    {
+        if (!$this->menus->contains($menu)) {
+            $this->menus->add($menu);
+        }
+
+        return $this;
+    }
+
+    public function removeMenu(Menu $menu): static
+    {
+        $this->menus->removeElement($menu);
 
         return $this;
     }
