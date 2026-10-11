@@ -17,8 +17,6 @@ services:
         condition: service_healthy
     ports:
       - "8080:80"
-      
-
 
   mysql:
     image: mysql:8.4
@@ -48,11 +46,34 @@ services:
         condition: service_healthy
     ports:
       - "8081:80"
-
-
-###< doctrine/doctrine-bundle ###
+  
+  mongodb:
+    image: mongo:8
+    restart: unless-stopped
+    env_file:
+      - path: .env.docker
+        required: false
+      - path: .env.docker.local
+        required: true
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "mongosh",
+          "--quiet",
+          "--eval",
+          "db.adminCommand('ping').ok"
+        ]
+      timeout: 5s
+      retries: 5
+      start_period: 20s
 
 volumes:
 ###> doctrine/doctrine-bundle ###
   mysql_data:
-###< doctrine/doctrine-bundle ###
+###> doctrine/mongodb-odm-bundle ###
+  mongodb_data:
